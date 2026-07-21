@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association Santé et Échanges Chine-France | 中法健康与交流协会</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .lang-btn.active { font-weight: bold; text-decoration: underline; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-handshake-angle text-red-600 text-3xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold text-slate-900 leading-tight">Association Santé et Échanges Chine-France</h1>
+                    <p class="text-xs text-slate-500" data-zh="中法健康与交流协会" data-fr="Association Santé et Échanges Chine-France" data-en="Sino-French Health & Exchange Association">中法健康与交流协会</p>
+                </div>
+            </div>
+            
+            <!-- Language Switcher -->
+            <div class="flex space-x-2 text-sm">
+                <button onclick="setLang('zh')" id="btn-zh" class="lang-btn active px-2 py-1 border rounded text-slate-700">中文</button>
+                <button onclick="setLang('fr')" id="btn-fr" class="lang-btn px-2 py-1 border rounded text-slate-700">FR</button>
+                <button onclick="setLang('en')" id="btn-en" class="lang-btn px-2 py-1 border rounded text-slate-700">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white py-16">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <span class="bg-red-600/30 text-red-300 border border-red-500/30 text-xs px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block"
+                  data-zh="法国官方注册 Law 1901" data-fr="Association Régie par la Loi 1901" data-en="Officially Registered Association (Law 1901)">
+                法国官方注册 Law 1901
+            </span>
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight" 
+                data-zh="连接中法教育与健康的桥梁<br>共筑跨文化交流新未来"
+                data-fr="Pont Éducatif et Médical entre la Chine et la France"
+                data-en="Connecting China & France in Education and Healthcare">
+                连接中法教育与健康的桥梁<br>共筑跨文化交流新未来
+            </h2>
+            <p class="text-slate-300 max-w-2xl mx-auto text-base md:text-lg mb-8"
+               data-zh="立足法国波尔多，面向全球法语区，深耕高等医学教育与大健康领域的官方合作平台。"
+               data-fr="Basée à Bordeaux, notre association promeut la coopération scientifique, académique et médicale entre la France et la Chine."
+               data-en="Based in Bordeaux, promoting academic, scientific, and healthcare cooperation between France, French-speaking regions, and China.">
+               立足法国波尔多，面向全球法语区，深耕高等医学教育与大健康领域的官方合作平台。
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-xs md:text-sm text-slate-300">
+                <span class="bg-white/10 px-3 py-1.5 rounded-lg border border-white/10"><i class="fa-solid fa-certificate text-yellow-400 mr-1.5"></i>RNA: W332037852</span>
+                <span class="bg-white/10 px-3 py-1.5 rounded-lg border border-white/10"><i class="fa-solid fa-building text-blue-400 mr-1.5"></i>SIRET: 106437270</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification / Verification Section -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <h3 class="text-2xl font-bold text-center mb-8" data-zh="权威认证与法律地位" data-fr="Certifications Officielles & Statut" data-en="Official Qualifications & Legal Status">权威认证与法律地位</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="text-red-600 text-2xl mb-3"><i class="fa-solid fa-landmark"></i></div>
+                <h4 class="font-bold mb-2" data-zh="吉伦特省政府备案" data-fr="Préfecture de la Gironde" data-en="Préfecture de la Gironde">吉伦特省政府备案</h4>
+                <p class="text-xs text-slate-600" data-zh="于2026年6月15日在法国吉伦特省完成正式注册声明，具有独立的社团法人资格。" data-fr="Déclaration de création enregistrée le 15 juin 2026 auprès de la Préfecture de la Gironde." data-en="Declaration of creation officially registered on June 15, 2026 with the Gironde Prefecture.">于2026年6月15日在法国吉伦特省完成正式注册声明，具有独立的社团法人资格。</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="text-blue-600 text-2xl mb-3"><i class="fa-solid fa-newspaper"></i></div>
+                <h4 class="font-bold mb-2" data-zh="法国官方公报刊登" data-fr="Journal Officiel de la République Française" data-en="Official Journal of the French Republic">法国官方公报刊登</h4>
+                <p class="text-xs text-slate-600" data-zh="信息登载于2026年6月23日《法国官方公报》（Annonce n° 764），具备完整官方公信力。" data-fr="Publication officielle au Journal Officiel le 23 juin 2026 (Annonce n° 764)." data-en="Officially published in the Journal Officiel on June 23, 2026 (Announcement No. 764).">信息登载于2026年6月23日《法国官方公报》（Annonce n° 764），具备完整官方公信力。</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="text-emerald-600 text-2xl mb-3"><i class="fa-solid fa-file-contract"></i></div>
+                <h4 class="font-bold mb-2" data-zh="天津医科大学官方授权" data-fr="Partenariat Université de Médecine de Tianjin" data-en="Tianjin Medical University Partner">天津医科大学官方授权</h4>
+                <p class="text-xs text-slate-600" data-zh="获天津医科大学国际医学院授权，在全法及多个法语国家/地区全面开展国际教育推广与招生宣传。" data-fr="Mandat officiel accordé par l'Institut de Médecine Internationale de l'Université de Médecine de Tianjin (2026-2029)." data-en="Authorized by Tianjin Medical University International Medical School for student recruitment in French-speaking territories (2026-2029).">获天津医科大学国际医学院授权，在全法及多个法语国家/地区全面开展国际教育推广与招生宣传。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authorized Territories Section -->
+    <section class="bg-white py-12 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <span class="text-xs font-bold text-red-600 uppercase tracking-widest" data-zh="官方授权招募区域 (2026–2029)" data-fr="Territoires du Mandat Officiel (2026–2029)" data-en="Authorized Recruitment Territories (2026–2029)">官方授权招募区域 (2026–2029)</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-4" data-zh="覆盖欧洲及北非各大主要法语国家与地区" data-fr="Couverture géographique en Europe et Afrique du Nord" data-en="Covering Key Francophone Territories in Europe & North Africa">覆盖欧洲及北非各大主要法语国家与地区</h3>
+                    <ul class="grid grid-cols-2 gap-2 text-sm text-slate-700">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>法国本土及海外省</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>摩纳哥公国</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>瑞士法语区</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>欧盟法语区 (比利时、卢森堡)</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>阿尔及利亚</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>摩洛哥 & 突尼斯</li>
+                    </ul>
+                </div>
+                <div class="md:w-5/12 bg-slate-50 p-6 rounded-xl border border-slate-200 text-xs leading-relaxed text-slate-600">
+                    <h4 class="font-bold text-sm text-slate-900 mb-2 border-b pb-2" data-zh="授权书特别声明" data-fr="Mentions du Mandat Officiel" data-en="Official Mandate Particulars">授权书特别声明</h4>
+                    <p data-zh="本协会获授权进行来华留学生教育推广、院校宣传及申请咨询服务。所有录取决定权由天津医科大学独立保留。"
+                       data-fr="L'Association est autorisée à mener des activités de promotion éducative. Toute décision d'admission relève de la compétence exclusive de l'Université."
+                       data-en="The Association is authorized for education promotion. All admission decisions remain solely under the authority of the University.">
+                       本协会获授权进行来华留学生教育推广、院校宣传及申请咨询服务。所有录取决定权由天津医科大学独立保留。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Core Pillars Section -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <h3 class="text-2xl font-bold text-center mb-8" data-zh="协会核心业务领域" data-fr="Nos Domaines d'Activité" data-en="Our Core Services">协会核心业务领域</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-5 rounded-lg border border-slate-200">
+                <i class="fa-solid fa-user-graduate text-indigo-600 text-xl mb-3"></i>
+                <h4 class="font-bold text-sm mb-1" data-zh="国际招生推广" data-fr="Promotion & Recrutement" data-en="Student Recruitment">国际招生推广</h4>
+                <p class="text-xs text-slate-500" data-zh="多渠道宣讲会、教育展策划，对接法国及欧洲优质生源赴华学习。" data-fr="Organisation de salons et réunions d'information pour orienter les étudiants vers la Chine." data-en="Promoting study-in-China programs through educational fairs and counseling.">多渠道宣讲会、教育展策划，对接法国及欧洲优质生源赴华学习。</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg border border-slate-200">
+                <i class="fa-solid fa-handshake-simple text-blue-600 text-xl mb-3"></i>
+                <h4 class="font-bold text-sm mb-1" data-zh="校际联合培养" data-fr="Partenariats Académiques" data-en="Academic Cooperation">校际联合培养</h4>
+                <p class="text-xs text-slate-500" data-zh="推动中法高校设立学分互认、双学位项目及夏令营/冬令营短研学。" data-fr="Développement de programmes de double diplôme, échanges de crédits et écoles d'été." data-en="Facilitating dual-degree programs, credit exchanges, and academic workshops.">推动中法高校设立学分互认、双学位项目及夏令营/冬令营短研学。</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg border border-slate-200">
+                <i class="fa-solid fa-hospital-user text-emerald-600 text-xl mb-3"></i>
+                <h4 class="font-bold text-sm mb-1" data-zh="临床与科研交流" data-fr="Échanges Médicaux & CHU" data-en="Clinical & Medical Exchanges">临床与科研交流</h4>
+                <p class="text-xs text-slate-500" data-zh="对接CHU Bordeaux等顶级医疗中心，促进中法专家讲学与临床实习。" data-fr="Projets de coopération avec des centres hospitaliers (CHU) et laboratoires de recherche." data-en="Connecting hospitals and research labs for clinical internships and expert lectures.">对接CHU Bordeaux等顶级医疗中心，促进中法专家讲学与临床实习。</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg border border-slate-200">
+                <i class="fa-solid fa-house-flag text-rose-600 text-xl mb-3"></i>
+                <h4 class="font-bold text-sm mb-1" data-zh="法国代表处服务" data-fr="Centre de Représentation" data-en="France Office Support">法国代表处服务</h4>
+                <p class="text-xs text-slate-500" data-zh="作为中国高校在法落地窗口，提供留学生接机、居留及跨文化适应保障。" data-fr="Support de proximité pour l'accueil, l'installation et l'intégration des étudiants." data-en="Local office support providing arrival assistance, visa, and cultural integration.">作为中国高校在法落地窗口，提供留学生接机、居留及跨文化适应保障。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Information -->
+    <footer class="bg-slate-900 text-slate-300 py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 text-xs">
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Association Santé et Échanges Chine-France</h4>
+                <p class="mb-1"><i class="fa-solid fa-location-dot mr-2 text-red-500"></i>Appartement 13, 4 A, esplanade Charles de Gaulle, 33000 Bordeaux, France</p>
+                <p class="mb-1"><i class="fa-solid fa-id-card mr-2 text-blue-500"></i>RNA: W332037852 | SIRET: 106437270</p>
+                <p><i class="fa-solid fa-user-tie mr-2 text-green-500"></i>Président: XI Haiqing</p>
+            </div>
+            <div class="md:text-right">
+                <p class="text-slate-400 mb-2" data-zh="© 2026 中法健康与交流协会 版权所有" data-fr="© 2026 Association Santé et Échanges Chine-France. Tous droits réservés." data-en="© 2026 Association Santé et Échanges Chine-France. All rights reserved.">© 2026 Association Santé et Échanges Chine-France. 版权所有</p>
+                <p class="text-slate-500" data-zh="依据法国 1901 年社团法依法注册与运行" data-fr="Association à but non lucratif régie par la Loi du 1er juillet 1901" data-en="Non-profit association registered under French Law 1901">依据法国 1901 年社团法依法注册与运行</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Multilingual Switch Script -->
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + lang).classList.add('active');
+            
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+        }
+    </script>
+</body>
+</html>
