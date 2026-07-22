@@ -14,27 +14,38 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
 
-   <!-- Header / Navigation (左上角中文名已更新) -->
+<!-- Header / Navigation (已修复手机端菜单不显示问题) -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <i class="fa-solid fa-handshake-angle text-red-600 text-3xl"></i>
-                <div>
-                    <a href="index.html" class="text-lg font-bold text-slate-900 leading-tight block">Association Santé et Échanges Chine-France</a>
-                    <p class="text-xs text-slate-500" data-zh="中法健康与文化交流协会" data-fr="Association Santé et Échanges Chine-France" data-en="Sino-French Health & Exchange Association">中法健康与文化交流协会</p>
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-3">
+            
+            <!-- 标志与名称 -->
+            <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-start">
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-handshake-angle text-red-600 text-2xl md:text-3xl"></i>
+                    <div>
+                        <a href="index.html" class="text-base md:text-lg font-bold text-slate-900 leading-tight block">Association Santé et Échanges Chine-France</a>
+                        <p class="text-[11px] md:text-xs text-slate-500" data-zh="中法健康与文化交流协会" data-fr="Association Santé et Échanges Chine-France" data-en="Sino-French Health & Exchange Association">中法健康与文化交流协会</p>
+                    </div>
+                </div>
+
+                <!-- 手机端语言切换小按钮 -->
+                <div class="flex md:hidden space-x-1 text-xs">
+                    <button onclick="setLang('zh')" id="btn-zh-m" class="lang-btn active px-1.5 py-0.5 border rounded text-slate-700">中</button>
+                    <button onclick="setLang('fr')" id="btn-fr-m" class="lang-btn px-1.5 py-0.5 border rounded text-slate-700">FR</button>
+                    <button onclick="setLang('en')" id="btn-en-m" class="lang-btn px-1.5 py-0.5 border rounded text-slate-700">EN</button>
                 </div>
             </div>
             
-            <!-- 二级页面跳转菜单 -->
-            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
-                <a href="about.html" class="hover:text-red-600" data-zh="关于协会" data-fr="À propos" data-en="About Us">关于协会</a>
-                <a href="authorization.html" class="hover:text-red-600" data-zh="官方授权资质" data-fr="Accréditations" data-en="Accreditations">官方授权资质</a>
-                <a href="services.html" class="hover:text-red-600" data-zh="业务与合作" data-fr="Services" data-en="Services">业务与合作</a>
-                <a href="contact.html" class="text-indigo-600 font-bold hover:text-indigo-800"><i class="fa-solid fa-envelope mr-1"></i><span data-zh="在线留言" data-fr="Contact" data-en="Contact Us">在线留言</span></a>
+            <!-- 二级页面跳转菜单 (手机端横向滚动/自适应显示) -->
+            <div class="flex items-center justify-center space-x-4 md:space-x-6 text-xs md:text-sm font-medium text-slate-600 w-full md:w-auto overflow-x-auto py-1 border-t md:border-t-0 border-slate-100">
+                <a href="about.html" class="whitespace-nowrap hover:text-red-600" data-zh="关于协会" data-fr="À propos" data-en="About Us">关于协会</a>
+                <a href="authorization.html" class="whitespace-nowrap hover:text-red-600" data-zh="官方授权资质" data-fr="Accréditations" data-en="Accreditations">官方授权资质</a>
+                <a href="services.html" class="whitespace-nowrap hover:text-red-600" data-zh="业务与合作" data-fr="Services" data-en="Services">业务与合作</a>
+                <a href="contact.html" class="whitespace-nowrap text-indigo-600 font-bold hover:text-indigo-800"><i class="fa-solid fa-envelope mr-1"></i><span data-zh="在线留言" data-fr="Contact" data-en="Contact Us">在线留言</span></a>
             </div>
 
-            <!-- 语言切换按钮 -->
-            <div class="flex space-x-2 text-sm">
+            <!-- 电脑端语言切换按钮 -->
+            <div class="hidden md:flex space-x-2 text-sm">
                 <button onclick="setLang('zh')" id="btn-zh" class="lang-btn active px-2 py-1 border rounded text-slate-700">中文</button>
                 <button onclick="setLang('fr')" id="btn-fr" class="lang-btn px-2 py-1 border rounded text-slate-700">FR</button>
                 <button onclick="setLang('en')" id="btn-en" class="lang-btn px-2 py-1 border rounded text-slate-700">EN</button>
@@ -202,11 +213,14 @@
     </footer>
 
     <!-- Multilingual Switch Script -->
-    <script>
+<script>
         function setLang(lang) {
+            // 切换所有语言按钮样式（包含电脑和手机版）
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('btn-' + lang).classList.add('active');
+            if(document.getElementById('btn-' + lang)) document.getElementById('btn-' + lang).classList.add('active');
+            if(document.getElementById('btn-' + lang + '-m')) document.getElementById('btn-' + lang + '-m').classList.add('active');
             
+            // 切换对应语言文本
             document.querySelectorAll('[data-' + lang + ']').forEach(el => {
                 el.innerHTML = el.getAttribute('data-' + lang);
             });
