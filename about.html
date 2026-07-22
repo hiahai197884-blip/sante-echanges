@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于我们 | Association Santé et Échanges Chine-France</title>
+    <title>关于协会 (PPT演示) | Association Santé et Échanges Chine-France</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .no-right-click { user-select: none; -webkit-user-select: none; }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
-    <nav class="bg-white border-b border-slate-200 py-4">
+    <!-- 顶部导航 -->
+    <nav class="bg-white border-b border-slate-200 py-4 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
             <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold text-sm">
                 <i class="fa-solid fa-arrow-left mr-2"></i>返回首页
             </a>
-            <span class="text-xs text-slate-500">立足波尔多 · 辐射全法</span>
+            <span class="text-xs text-slate-500">协会官方介绍演示 · 仅在线查验</span>
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto px-4 py-10">
-        <h1 class="text-2xl font-bold text-slate-900 mb-4">关于中法健康与交流协会</h1>
-        <p class="text-sm text-slate-600 leading-relaxed mb-8">
-            中法健康与交流协会（Association Santé et Échanges Chine-France）是在法国吉伦特省依法注册的非营利性社团（Association Law 1901）[cite: 16, 17]。协会总部位于法国“欧洲生活品质之都”波尔多[cite: 19]。我们专注于搭建中法两国在高等医学教育、大健康与跨文化交流领域的坚实桥梁[cite: 19]。
-        </p>
-
-        <h2 class="text-lg font-bold text-slate-900 mb-4">波尔多（Bordeaux）总部区位优势</h2>
-        <div class="grid md:grid-cols-2 gap-4 text-xs text-slate-600 mb-8">
-            <div class="bg-white p-4 rounded-lg border border-slate-200">
-                <h3 class="font-bold text-slate-800 text-sm mb-1">法国第五大教育重镇</h3>
-                <p>拥有超过10万名学子，汇聚始建于1441年的波尔多大学以及顶尖工程师学院与商学院[cite: 19]。</p>
+    <main class="max-w-5xl mx-auto px-4 py-8">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="flex items-center space-x-3 text-red-600 border-b pb-4 mb-4">
+                <i class="fa-solid fa-file-powerpoint text-3xl"></i>
+                <div>
+                    <h1 class="text-xl font-bold text-slate-900">中法健康与文化交流协会官方介绍</h1>
+                    <p class="text-xs text-slate-500">Présentation de l'Association Santé et Échanges Chine-France</p>
+                </div>
             </div>
-            <div class="bg-white p-4 rounded-lg border border-slate-200">
-                <h3 class="font-bold text-slate-800 text-sm mb-1">世界级医疗与生命科学中心</h3>
-                <p>拥有波尔多阿基坦大区大学中心医院（CHU de Bordeaux）及前沿生命科学实验室[cite: 19]。</p>
+
+            <!-- 安全提示 -->
+            <div class="text-xs text-slate-500 mb-4 bg-red-50 p-3 rounded border border-red-100 flex items-center justify-between">
+                <span><i class="fa-solid fa-lock mr-1 text-red-500"></i> 本文件为协会官方 PPT 演示文档，仅限网页内在线翻页阅读，未开放下载与另存为[cite: 19]。</span>
+            </div>
+
+            <!-- PDF/PPT 预览窗口 (16:9 或大屏自适应) -->
+            <div class="w-full h-[700px] border border-slate-200 rounded-lg overflow-hidden bg-slate-100 no-right-click" oncontextmenu="return false;">
+                <iframe src="association-presentation.pdf#toolbar=0&navpanes=0&scrollbar=1" class="w-full h-full" frameborder="0"></iframe>
             </div>
         </div>
     </main>
