@@ -8,35 +8,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .no-right-click { user-select: none; -webkit-user-select: none; }
+        .lang-btn.active { font-weight: bold; text-decoration: underline; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
-    <nav class="bg-white border-b border-slate-200 py-4 sticky top-0 z-50">
+    <nav class="bg-white border-b border-slate-200 py-3 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
-            <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold text-sm">
-                <i class="fa-solid fa-arrow-left mr-2"></i>返回首页
+            <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold text-xs md:text-sm">
+                <i class="fa-solid fa-arrow-left mr-1.5"></i><span data-zh="返回首页" data-fr="Retour" data-en="Back">返回首页</span>
             </a>
-            <span class="text-xs text-slate-500">仅供在线实时查验 · 不提供下载</span>
+            <div class="flex items-center space-x-3">
+                <span class="text-xs text-slate-500 hidden sm:inline" data-zh="仅供在线实时查验 · 不提供下载" data-fr="Consultation en ligne uniquement" data-en="For online verification only">仅供在线实时查验 · 不提供下载</span>
+                <div class="flex space-x-1 text-xs">
+                    <button onclick="setLang('zh')" id="btn-zh" class="lang-btn active px-2 py-0.5 border rounded text-slate-700">中文</button>
+                    <button onclick="setLang('fr')" id="btn-fr" class="lang-btn px-2 py-0.5 border rounded text-slate-700">FR</button>
+                    <button onclick="setLang('en')" id="btn-en" class="lang-btn px-2 py-0.5 border rounded text-slate-700">EN</button>
+                </div>
+            </div>
         </div>
     </nav>
 
     <main class="max-w-4xl mx-auto px-4 py-8">
         <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-            <div class="flex items-center space-x-3 text-red-600 border-b pb-4 mb-4">
+            <div class="flex items-center space-x-3 text-blue-600 border-b pb-4 mb-4">
                 <i class="fa-solid fa-file-shield text-3xl"></i>
                 <div>
-                    <h1 class="text-xl font-bold text-slate-900">天津医科大学国际医学院官方授权书</h1>
+                    <h1 class="text-xl font-bold text-slate-900" data-zh="天津医科大学国际医学院官方授权书" data-fr="Mandat Officiel de l'Université de Médecine de Tianjin" data-en="Tianjin Medical University Official Authorization">天津医科大学国际医学院官方授权书</h1>
                     <p class="text-xs text-slate-500">Authorization for Education Promotion & Student Recruitment</p>
                 </div>
             </div>
-
-            <div class="text-xs text-slate-500 mb-4 bg-red-50 p-3 rounded border border-red-100">
-                <i class="fa-solid fa-lock mr-1 text-red-500"></i> 为保障文件与印章安全，本授权书原件仅限网页内在线阅读查验，未开放下载与打印功能。
-            </div>
-
             <div class="w-full h-[750px] border border-slate-200 rounded-lg overflow-hidden bg-slate-100 no-right-click" oncontextmenu="return false;">
                 <iframe src="shouquanshu.pdf#toolbar=0&navpanes=0&scrollbar=1" class="w-full h-full" frameborder="0"></iframe>
             </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var savedLang = localStorage.getItem('user_lang') || 'zh';
+            setLang(savedLang);
+        });
+        function setLang(lang) {
+            localStorage.setItem('user_lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            if(document.getElementById('btn-' + lang)) document.getElementById('btn-' + lang).classList.add('active');
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => { el.innerHTML = el.getAttribute('data-' + lang); });
+        }
+    </script>
+</body>
+</html>
         </div>
     </main>
 </body>
