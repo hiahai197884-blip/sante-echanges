@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 & 在线留言 | Association Santé et Échanges Chine-France</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+    <!-- 顶部导航 -->
+    <nav class="bg-white border-b border-slate-200 py-4 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold text-sm">
+                <i class="fa-solid fa-arrow-left mr-2"></i>返回首页
+            </a>
+            <span class="text-xs text-slate-500">RNA: W332037852 | 在线咨询与留言</span>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-10">
+        <div class="grid md:grid-cols-5 gap-8">
+            
+            <!-- 左侧：联系信息栏（已包含官方邮箱） -->
+            <div class="md:col-span-2 bg-indigo-900 text-white p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                <div>
+                    <h1 class="text-xl font-bold mb-4">联系我们</h1>
+                    <p class="text-xs text-indigo-200 leading-relaxed mb-6">
+                        如果您对中法高等医学教育合作、招生咨询、学术交流或临床合作有任何疑问，请随时给我们留言，我们的工作人员会及时回复您。
+                    </p>
+                    
+                    <div class="space-y-4 text-xs">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-envelope text-indigo-400 mt-1"></i>
+                            <div>
+                                <strong class="block text-indigo-100">官方邮箱</strong>
+                                <a href="mailto:assosanteechanges@gmail.com" class="text-indigo-200 hover:underline break-all">assosanteechanges@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-red-400 mt-1"></i>
+                            <div>
+                                <strong class="block text-indigo-100">协会总部地址</strong>
+                                <span class="text-indigo-200">Appartement 13, 4 A, esplanade Charles de Gaulle, 33000 Bordeaux, France[cite: 16]</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-certificate text-yellow-400 mt-1"></i>
+                            <div>
+                                <strong class="block text-indigo-100">官方注册资质</strong>
+                                <span class="text-indigo-200">RNA: W332037852[cite: 16]<br>SIRET: 106437270[cite: 18]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4 border-t border-indigo-800 text-[11px] text-indigo-300">
+                    <p>© 2026 Association Santé et Échanges Chine-France[cite: 19]</p>
+                </div>
+            </div>
+
+            <!-- 右侧：留言表单（直连您的 Gmail） -->
+            <div class="md:col-span-3 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h2 class="text-lg font-bold text-slate-900 mb-1">在线留言</h2>
+                <p class="text-xs text-slate-500 mb-6">填写提交后，留言内容将直接发送至协会官方邮箱。</p>
+
+                <form action="https://formsubmit.co/assosanteechanges@gmail.com" method="POST" class="space-y-4 text-xs">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://sante-echanges.vercel.app/contact.html?status=success">
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">您的姓名 / Name <span class="text-red-500">*</span></label>
+                        <input type="text" name="name" required class="w-full p-2.5 border border-slate-300 rounded focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="例如：张先生 / M. Dupont">
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">您的邮箱 / Email <span class="text-red-500">*</span></label>
+                        <input type="email" name="email" required class="w-full p-2.5 border border-slate-300 rounded focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="name@example.com">
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">机构/单位名称 (选填)</label>
+                        <input type="text" name="organization" class="w-full p-2.5 border border-slate-300 rounded focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="例如：某某大学 / 医院 / 个人">
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">留言内容 / Message <span class="text-red-500">*</span></label>
+                        <textarea name="message" rows="5" required class="w-full p-2 border border-slate-300 rounded focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="请详细描述您的咨询事项或合作意向..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition shadow flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>发送留言 / Send Message</span>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
