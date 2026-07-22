@@ -7,15 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 禁止右键与选择（防右键另存为） */
-        .no-right-click {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
+        .no-right-click { user-select: none; -webkit-user-select: none; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
@@ -45,13 +37,13 @@
 
             <!-- 文字细则摘要 -->
             <div class="text-sm space-y-2 text-slate-600 border-l-2 border-red-500 pl-4 py-1 mb-6">
-                <p><strong>授权期限：</strong>2026年7月16日 至 2029年7月16日[cite: 18]</p>
-                <p><strong>授权区域：</strong>法国（含本土及海外省）、摩纳哥公国、瑞士、欧盟法语区（比利时、卢森堡）、阿尔及利亚、摩洛哥、突尼斯[cite: 18]。</p>
-                <p><strong>授权范围：</strong>在上述区域内开展来华留学生教育推广及招生宣传工作[cite: 18]。</p>
+                <p><strong>授权期限：</strong>2026年7月16日 至 2029年7月16日</p>
+                <p><strong>授权区域：</strong>法国（含本土及海外省）、摩纳哥公国、瑞士、欧盟法语区（比利时、卢森堡）、阿尔及利亚、摩洛哥、突尼斯。</p>
+                <p><strong>授权范围：</strong>在上述区域内开展来华留学生教育推广及招生宣传工作。</p>
                 <p class="text-xs text-slate-400 mt-2"><i class="fa-solid fa-lock mr-1"></i> 为保障公章与文件安全，本文件仅限网页在线实时查验，不开放下载或打印。</p>
             </div>
 
-            <!-- PDF 在线纯展示窗口（参数隐藏工具栏 + 防右键） -->
+            <!-- PDF 在线纯展示窗口 -->
             <div class="w-full h-[600px] border border-slate-200 rounded-lg overflow-hidden bg-slate-100 no-right-click relative" oncontextmenu="return false;">
                 <iframe src="shouquanshu.pdf#toolbar=0&navpanes=0&scrollbar=1" class="w-full h-full" frameborder="0">
                     <p class="p-4 text-xs text-slate-500">您的浏览器暂不支持直接内嵌阅读。</p>
@@ -70,9 +62,9 @@
             </div>
 
             <div class="text-sm space-y-2 text-slate-600 border-l-2 border-blue-500 pl-4 py-1 mb-6">
-                <p><strong>签发机构：</strong>法国吉伦特省政府 (Préfecture de la Gironde)[cite: 17]</p>
-                <p><strong>声明日期：</strong>2026 年 6 月 15 日[cite: 17]</p>
-                <p><strong>法律依据：</strong>依据法国 1901 年 7 月 1 日社团法依法批准设立[cite: 17]。</p>
+                <p><strong>签发机构：</strong>法国吉伦特省政府 (Préfecture de la Gironde)</p>
+                <p><strong>声明日期：</strong>2026 年 6 月 15 日</p>
+                <p><strong>法律依据：</strong>依据法国 1901 年 7 月 1 日社团法依法批准设立。</p>
                 <p class="text-xs text-slate-400 mt-2"><i class="fa-solid fa-lock mr-1"></i> 仅限在线实时查验，不开放下载。</p>
             </div>
 
@@ -94,8 +86,8 @@
             </div>
 
             <div class="text-sm space-y-2 text-slate-600 border-l-2 border-indigo-500 pl-4 py-1 mb-6">
-                <p><strong>刊登日期：</strong>2026 年 6 月 23 日（第 25 期，764 号公告）[cite: 16]</p>
-                <p><strong>核心摘要：</strong>正式向全法公示 Association Santé et Échanges Chine-France 的成立与法定宗旨[cite: 16]。</p>
+                <p><strong>刊登日期：</strong>2026 年 6 月 23 日（第 25 期，764 号公告）</p>
+                <p><strong>核心摘要：</strong>正式向全法公示 Association Santé et Échanges Chine-France 的成立与法定宗旨。</p>
                 <p class="text-xs text-slate-400 mt-2"><i class="fa-solid fa-lock mr-1"></i> 仅限在线实时查验，不开放下载。</p>
             </div>
 
@@ -104,6 +96,10 @@
                     <p class="p-4 text-xs text-slate-500">您的浏览器暂不支持直接内嵌阅读。</p>
                 </iframe>
             </div>
+        </div>
+    </main>
+</body>
+</html>
         </div>
     </main>
 </body>
