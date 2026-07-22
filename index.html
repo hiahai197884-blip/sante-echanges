@@ -15,24 +15,30 @@
 <body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
 
     <!-- Header / Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <i class="fa-solid fa-handshake-angle text-red-600 text-3xl"></i>
-                <div>
-                    <h1 class="text-lg font-bold text-slate-900 leading-tight">Association Santé et Échanges Chine-France</h1>
-                    <p class="text-xs text-slate-500" data-zh="中法健康与交流协会" data-fr="Association Santé et Échanges Chine-France" data-en="Sino-French Health & Exchange Association">中法健康与交流协会</p>
-                </div>
-            </div>
-            
-            <!-- Language Switcher -->
-            <div class="flex space-x-2 text-sm">
-                <button onclick="setLang('zh')" id="btn-zh" class="lang-btn active px-2 py-1 border rounded text-slate-700">中文</button>
-                <button onclick="setLang('fr')" id="btn-fr" class="lang-btn px-2 py-1 border rounded text-slate-700">FR</button>
-                <button onclick="setLang('en')" id="btn-en" class="lang-btn px-2 py-1 border rounded text-slate-700">EN</button>
+   <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-handshake-angle text-red-600 text-3xl"></i>
+            <div>
+                <a href="index.html" class="text-lg font-bold text-slate-900 leading-tight block">Association Santé et Échanges Chine-France</a>
+                <p class="text-xs text-slate-500">中法健康与交流协会</p>
             </div>
         </div>
-    </header>
+        
+        <!-- 二级页面跳转菜单 -->
+        <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+            <a href="about.html" class="hover:text-red-600">关于协会</a>
+            <a href="authorization.html" class="hover:text-red-600">官方授权资质</a>
+            <a href="services.html" class="hover:text-red-600">业务与合作</a>
+        </div>
+
+        <!-- 语言切换 -->
+        <div class="flex space-x-2 text-sm">
+            <button onclick="setLang('zh')" id="btn-zh" class="lang-btn active px-2 py-1 border rounded text-slate-700">中文</button>
+            <button onclick="setLang('fr')" id="btn-fr" class="lang-btn px-2 py-1 border rounded text-slate-700">FR</button>
+        </div>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white py-16">
