@@ -3,51 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>核心业务与合作模式 | Association Santé et Échanges Chine-France</title>
+    <title>业务与合作 | Association Santé et Échanges Chine-France</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .lang-btn.active { font-weight: bold; text-decoration: underline; }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
-    <nav class="bg-white border-b border-slate-200 py-4 sticky top-0 z-50">
+    <nav class="bg-white border-b border-slate-200 py-3 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
-            <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold text-sm">
-                <i class="fa-solid fa-arrow-left mr-2"></i>返回首页
+            <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold text-xs md:text-sm">
+                <i class="fa-solid fa-arrow-left mr-1.5"></i><span data-zh="返回首页" data-fr="Retour à l'accueil" data-en="Back to Home">返回首页</span>
             </a>
-            <span class="text-xs text-slate-500">专业服务 · 全程无忧</span>
+            <div class="flex items-center space-x-3">
+                <span class="text-xs text-slate-500 hidden sm:inline" data-zh="专业服务 · 全程无忧" data-fr="Services Professionnels" data-en="Professional Services">专业服务 · 全程无忧</span>
+                <div class="flex space-x-1 text-xs">
+                    <button onclick="setLang('zh')" id="btn-zh" class="lang-btn active px-2 py-0.5 border rounded text-slate-700">中文</button>
+                    <button onclick="setLang('fr')" id="btn-fr" class="lang-btn px-2 py-0.5 border rounded text-slate-700">FR</button>
+                    <button onclick="setLang('en')" id="btn-en" class="lang-btn px-2 py-0.5 border rounded text-slate-700">EN</button>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto px-4 py-10">
-        <h1 class="text-2xl font-bold text-slate-900 mb-6">核心业务与双向合作模式</h1>
+    <main class="max-w-5xl mx-auto px-4 py-8 md:py-10">
+        <h1 class="text-2xl font-bold text-slate-900 mb-6" data-zh="核心业务与双向合作模式" data-fr="Nos Services et Axes de Coopération" data-en="Core Services & Cooperation Models">核心业务与双向合作模式</h1>
 
         <div class="grid md:grid-cols-2 gap-8 mb-10">
             <!-- 模式一 -->
             <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <span class="bg-red-100 text-red-600 text-xs px-2.5 py-1 rounded font-bold">合作模式一</span>
-                <h2 class="text-lg font-bold text-slate-900 mt-2 mb-3">法国学生赴华留学/研学</h2>
+                <span class="bg-red-100 text-red-600 text-xs px-2.5 py-1 rounded font-bold" data-zh="合作模式一" data-fr="Axe 1" data-en="Model 1">合作模式一</span>
+                <h2 class="text-lg font-bold text-slate-900 mt-2 mb-3" data-zh="法国及国际学生赴华留学/研学" data-fr="Études et Stages en Chine pour Étudiants Français" data-en="Study & Internship Programs in China">法国及国际学生赴华留学/研学</h2>
                 <ul class="text-xs text-slate-600 space-y-2.5">
-                    <li><strong class="text-slate-800">· 中学与大学宣讲：</strong>深入法国高中与大学课堂举办招生说明会与文化体验营。</li>
-                    <li><strong class="text-slate-800">· 申请全流程护航：</strong>提供专业择校规划、HSK 备考资源、签证指导及入境接机安排。</li>
-                    <li><strong class="text-slate-800">· 落地融入支持：</strong>协助办理在华住宿、选课与文化适应，保障全程无忧。</li>
+                    <li><strong class="text-slate-800" data-zh="· 中学与大学宣讲：" data-fr="· Conférences d'information : " data-en="· University Information Sessions: ">· 中学与大学宣讲：</strong><span data-zh="深入法国高中与大学课堂举办招生说明会与文化体验营。" data-fr="Organisation de salons et présentations dans les lycées et universités en France." data-en="Hosting admissions info sessions and cultural camps in French high schools and universities.">深入法国高中与大学课堂举办招生说明会与文化体验营。</span></li>
+                    <li><strong class="text-slate-800" data-zh="· 申请全流程护航：" data-fr="· Accompagnement complet : " data-en="· Full Application Support: ">· 申请全流程护航：</strong><span data-zh="提供专业择校规划、HSK 备考资源、签证指导及入境接机安排。" data-fr="Conseil en orientation, préparation au HSK, accompagnement visa et accueil à l'arrivée." data-en="Academic counseling, HSK prep, visa guidance, and arrival reception.">提供专业择校规划、HSK 备考资源、签证指导及入境接机安排。</span></li>
                 </ul>
             </div>
 
             <!-- 模式二 -->
             <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <span class="bg-blue-100 text-blue-600 text-xs px-2.5 py-1 rounded font-bold">合作模式二</span>
-                <h2 class="text-lg font-bold text-slate-900 mt-2 mb-3">中国学生赴法/校际联合培养</h2>
+                <span class="bg-blue-100 text-blue-600 text-xs px-2.5 py-1 rounded font-bold" data-zh="合作模式二" data-fr="Axe 2" data-en="Model 2">合作模式二</span>
+                <h2 class="text-lg font-bold text-slate-900 mt-2 mb-3" data-zh="中国学生赴法/校际联合培养" data-fr="Partenariats Académiques et Échanges Médicaux" data-en="Academic Partnerships & Clinical Exchanges">中国学生赴法/校际联合培养</h2>
                 <ul class="text-xs text-slate-600 space-y-2.5">
-                    <li><strong class="text-slate-800">· 联合培养项目：</strong>促成“3+2”本硕连读、学分互认及双学位建设。</li>
-                    <li><strong class="text-slate-800">· 临床与医学观察：</strong>对接 CHU Bordeaux 及私立诊所，提供医学观察与学术交流机会。</li>
-                    <li><strong class="text-slate-800">· 法国代表中心：</strong>作为中国高校在法的官方窗口，提供海外本地化事务统筹。</li>
+                    <li><strong class="text-slate-800" data-zh="· 联合培养项目：" data-fr="· Programmes de co-diplômation : " data-en="· Joint Programs: ">· 联合培养项目：</strong><span data-zh="促成中法高校学分互认、双学位项目及短研学。" data-fr="Développement de programmes de double diplôme et échanges de crédits." data-en="Promoting credit exchanges, dual-degree, and short-term study tours.">促成中法高校学分互认、双学位项目及短研学。</span></li>
+                    <li><strong class="text-slate-800" data-zh="· 临床与医学观察：" data-fr="· Échanges médicaux : " data-en="· Medical Internships: ">· 临床与医学观察：</strong><span data-zh="对接 CHU Bordeaux 等顶级医疗中心，提供医学观察与学术交流。" data-fr="Mise en relation avec des centres hospitaliers (CHU) pour des stages d'observation." data-en="Connecting with CHU Bordeaux and medical centers for observer internships.">对接 CHU Bordeaux 等顶级医疗中心，提供医学观察与学术交流。</span></li>
                 </ul>
             </div>
         </div>
     </main>
-</body>
-</html>
-            </div>
-        </div>
-    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var savedLang = localStorage.getItem('user_lang') || 'zh';
+            setLang(savedLang);
+        });
+
+        function setLang(lang) {
+            localStorage.setItem('user_lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            if(document.getElementById('btn-' + lang)) document.getElementById('btn-' + lang).classList.add('active');
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+        }
+    </script>
 </body>
 </html>
