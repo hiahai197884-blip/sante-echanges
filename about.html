@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于协会 (PPT演示) | Association Santé et Échanges Chine-France</title>
+    <title>关于协会 | Association Santé et Échanges Chine-France</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .no-right-click { user-select: none; -webkit-user-select: none; }
+        .lang-btn.active { font-weight: bold; text-decoration: underline; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
-    <!-- 顶部导航 -->
-    <nav class="bg-white border-b border-slate-200 py-4 sticky top-0 z-50">
+    <!-- 顶部导航与多语言切换 -->
+    <nav class="bg-white border-b border-slate-200 py-3 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
-            <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold text-sm">
-                <i class="fa-solid fa-arrow-left mr-2"></i>返回首页
+            <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold text-xs md:text-sm">
+                <i class="fa-solid fa-arrow-left mr-1.5"></i><span data-zh="返回首页" data-fr="Retour à l'accueil" data-en="Back to Home">返回首页</span>
             </a>
-            <span class="text-xs text-slate-500">协会官方介绍演示 · 仅在线查验</span>
+            
+            <div class="flex items-center space-x-3">
+                <span class="text-xs text-slate-500 hidden sm:inline" data-zh="协会官方介绍演示" data-fr="Présentation officielle de l'association" data-en="Official Presentation">协会官方介绍演示</span>
+                <!-- 语言切换按钮 -->
+                <div class="flex space-x-1 text-xs">
+                    <button onclick="setLang('zh')" id="btn-zh" class="lang-btn active px-2 py-0.5 border rounded text-slate-700">中文</button>
+                    <button onclick="setLang('fr')" id="btn-fr" class="lang-btn px-2 py-0.5 border rounded text-slate-700">FR</button>
+                    <button onclick="setLang('en')" id="btn-en" class="lang-btn px-2 py-0.5 border rounded text-slate-700">EN</button>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -26,25 +36,35 @@
             <div class="flex items-center space-x-3 text-red-600 border-b pb-4 mb-4">
                 <i class="fa-solid fa-file-powerpoint text-3xl"></i>
                 <div>
-                    <h1 class="text-xl font-bold text-slate-900">中法健康与文化交流协会官方介绍</h1>
+                    <h1 class="text-xl font-bold text-slate-900" data-zh="中法健康与文化交流协会官方介绍" data-fr="Présentation de l'Association Santé et Échanges Chine-France" data-en="Presentation of Sino-French Health & Exchange Association">中法健康与文化交流协会官方介绍</h1>
                     <p class="text-xs text-slate-500">Présentation de l'Association Santé et Échanges Chine-France</p>
                 </div>
             </div>
 
-            <!-- 安全提示 -->
             <div class="text-xs text-slate-500 mb-4 bg-red-50 p-3 rounded border border-red-100 flex items-center justify-between">
-                <span><i class="fa-solid fa-lock mr-1 text-red-500"></i> 本文件为协会官方 PPT 演示文档，仅限网页内在线翻页阅读，未开放下载与另存为。</span>
+                <span><i class="fa-solid fa-lock mr-1 text-red-500"></i> <span data-zh="本文件为协会官方演示文档，仅限网页内在线阅读查验，未开放下载。" data-fr="Ce document est réservé à la consultation en ligne uniquement." data-en="This document is for online viewing only and cannot be downloaded.">本文件为协会官方演示文档，仅限网页内在线阅读查验，未开放下载。</span></span>
             </div>
 
-            <!-- PDF/PPT 预览窗口 -->
-            <div class="w-full h-[700px] border border-slate-200 rounded-lg overflow-hidden bg-slate-100 no-right-click" oncontextmenu="return false;">
+            <div class="w-full h-[650px] md:h-[750px] border border-slate-200 rounded-lg overflow-hidden bg-slate-100 no-right-click" oncontextmenu="return false;">
                 <iframe src="association-presentation.pdf#toolbar=0&navpanes=0&scrollbar=1" class="w-full h-full" frameborder="0"></iframe>
             </div>
         </div>
     </main>
-</body>
-</html>
-        </div>
-    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var savedLang = localStorage.getItem('user_lang') || 'zh';
+            setLang(savedLang);
+        });
+
+        function setLang(lang) {
+            localStorage.setItem('user_lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            if(document.getElementById('btn-' + lang)) document.getElementById('btn-' + lang).classList.add('active');
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+        }
+    </script>
 </body>
 </html>
