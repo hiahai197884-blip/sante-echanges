@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 禁止在 PDF 区域右键点击（防右键另存为） */
+        /* 禁止右键与选择（防右键另存为） */
         .no-right-click {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -20,7 +20,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
     <!-- 头部返回导航 -->
-    <nav class="bg-white border-b border-slate-200 py-4">
+    <nav class="bg-white border-b border-slate-200 py-4 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
             <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold text-sm">
                 <i class="fa-solid fa-arrow-left mr-2"></i>返回首页
@@ -33,13 +33,13 @@
         <h1 class="text-2xl font-bold text-slate-900 mb-2">官方授权与登记资质声明</h1>
         <p class="text-xs text-slate-500 mb-8">Official Accreditation & Legal Registration Documents</p>
 
-        <!-- 天津医科大学授权书模块 -->
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mb-8">
+        <!-- 1. 天津医科大学授权书模块 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mb-10">
             <div class="flex items-center space-x-3 text-red-600 border-b pb-4 mb-6">
                 <i class="fa-solid fa-file-shield text-3xl"></i>
                 <div>
-                    <h2 class="text-lg font-bold text-slate-900">天津医科大学国际医学院官方授权书</h2>
-                    <p class="text-xs text-slate-500">Authorization for Education Promotion & Student Recruitment (仅供在线查验)</p>
+                    <h2 class="text-lg font-bold text-slate-900">1. 天津医科大学国际医学院官方授权书</h2>
+                    <p class="text-xs text-slate-500">Authorization for Education Promotion & Student Recruitment</p>
                 </div>
             </div>
 
@@ -48,40 +48,62 @@
                 <p><strong>授权期限：</strong>2026年7月16日 至 2029年7月16日[cite: 18]</p>
                 <p><strong>授权区域：</strong>法国（含本土及海外省）、摩纳哥公国、瑞士、欧盟法语区（比利时、卢森堡）、阿尔及利亚、摩洛哥、突尼斯[cite: 18]。</p>
                 <p><strong>授权范围：</strong>在上述区域内开展来华留学生教育推广及招生宣传工作[cite: 18]。</p>
-                <p class="text-xs text-slate-400 mt-2"><i class="fa-solid fa-lock mr-1"></i> 为保障公章与文件安全，本授权书仅限网页在线实时查验，不开放下载或打印。</p>
+                <p class="text-xs text-slate-400 mt-2"><i class="fa-solid fa-lock mr-1"></i> 为保障公章与文件安全，本文件仅限网页在线实时查验，不开放下载或打印。</p>
             </div>
 
             <!-- PDF 在线纯展示窗口（参数隐藏工具栏 + 防右键） -->
-            <div class="w-full h-[650px] border border-slate-200 rounded-lg overflow-hidden bg-slate-100 no-right-click relative" oncontextmenu="return false;">
-                <!-- PDF 链接后加上 #toolbar=0&navpanes=0 隐藏下载/打印等工具按钮 -->
+            <div class="w-full h-[600px] border border-slate-200 rounded-lg overflow-hidden bg-slate-100 no-right-click relative" oncontextmenu="return false;">
                 <iframe src="shouquanshu.pdf#toolbar=0&navpanes=0&scrollbar=1" class="w-full h-full" frameborder="0">
                     <p class="p-4 text-xs text-slate-500">您的浏览器暂不支持直接内嵌阅读。</p>
                 </iframe>
             </div>
         </div>
 
-        <!-- 法国政府登记模块 -->
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-            <div class="flex items-center space-x-3 text-blue-600 mb-4">
-                <i class="fa-solid fa-building-columns text-2xl"></i>
-                <h2 class="text-lg font-bold text-slate-900">法国吉伦特省政府登记与公报</h2>
+        <!-- 2. 吉伦特省政府声明模块 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mb-10">
+            <div class="flex items-center space-x-3 text-blue-600 border-b pb-4 mb-6">
+                <i class="fa-solid fa-building-columns text-3xl"></i>
+                <div>
+                    <h2 class="text-lg font-bold text-slate-900">2. 法国吉伦特省政府声明 (Récépissé de Déclaration)</h2>
+                    <p class="text-xs text-slate-500">Préfecture de la Gironde - Association n° W332037852</p>
+                </div>
             </div>
-            <ul class="text-sm space-y-3 text-slate-600">
-                <li class="flex items-start">
-                    <i class="fa-solid fa-check-double text-green-500 mr-2.5 mt-1"></i>
-                    <div>
-                        <strong>吉伦特省政府声明 (Récépissé de Déclaration)</strong>
-                        <p class="text-xs text-slate-500">2026年6月15日由吉伦特省副省长（Pour ordre）签发，确认 Association Santé et Échanges Chine-France 依法成立[cite: 17]。</p>
-                    </div>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa-solid fa-check-double text-green-500 mr-2.5 mt-1"></i>
-                    <div>
-                        <strong>法国官方公报刊登 (Journal Officiel n°25)</strong>
-                        <p class="text-xs text-slate-500">刊登于 2026 年 6 月 23 日第 764 号公告，具备全法官方公信力[cite: 16]。</p>
-                    </div>
-                </li>
-            </ul>
+
+            <div class="text-sm space-y-2 text-slate-600 border-l-2 border-blue-500 pl-4 py-1 mb-6">
+                <p><strong>签发机构：</strong>法国吉伦特省政府 (Préfecture de la Gironde)[cite: 17]</p>
+                <p><strong>声明日期：</strong>2026 年 6 月 15 日[cite: 17]</p>
+                <p><strong>法律依据：</strong>依据法国 1901 年 7 月 1 日社团法依法批准设立[cite: 17]。</p>
+                <p class="text-xs text-slate-400 mt-2"><i class="fa-solid fa-lock mr-1"></i> 仅限在线实时查验，不开放下载。</p>
+            </div>
+
+            <div class="w-full h-[600px] border border-slate-200 rounded-lg overflow-hidden bg-slate-100 no-right-click relative" oncontextmenu="return false;">
+                <iframe src="recepisse.pdf#toolbar=0&navpanes=0&scrollbar=1" class="w-full h-full" frameborder="0">
+                    <p class="p-4 text-xs text-slate-500">您的浏览器暂不支持直接内嵌阅读。</p>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- 3. 法国官方公报刊登模块 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mb-8">
+            <div class="flex items-center space-x-3 text-indigo-600 border-b pb-4 mb-6">
+                <i class="fa-solid fa-newspaper text-3xl"></i>
+                <div>
+                    <h2 class="text-lg font-bold text-slate-900">3. 法国官方公报刊登 (Journal Officiel)</h2>
+                    <p class="text-xs text-slate-500">Journal Officiel de la République Française - Annonce n° 764</p>
+                </div>
+            </div>
+
+            <div class="text-sm space-y-2 text-slate-600 border-l-2 border-indigo-500 pl-4 py-1 mb-6">
+                <p><strong>刊登日期：</strong>2026 年 6 月 23 日（第 25 期，764 号公告）[cite: 16]</p>
+                <p><strong>核心摘要：</strong>正式向全法公示 Association Santé et Échanges Chine-France 的成立与法定宗旨[cite: 16]。</p>
+                <p class="text-xs text-slate-400 mt-2"><i class="fa-solid fa-lock mr-1"></i> 仅限在线实时查验，不开放下载。</p>
+            </div>
+
+            <div class="w-full h-[600px] border border-slate-200 rounded-lg overflow-hidden bg-slate-100 no-right-click relative" oncontextmenu="return false;">
+                <iframe src="joafe.pdf#toolbar=0&navpanes=0&scrollbar=1" class="w-full h-full" frameborder="0">
+                    <p class="p-4 text-xs text-slate-500">您的浏览器暂不支持直接内嵌阅读。</p>
+                </iframe>
+            </div>
         </div>
     </main>
 </body>
